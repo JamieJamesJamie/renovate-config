@@ -4,6 +4,7 @@
     "config:best-practices",
     ":semanticCommits",
     ":reviewer(JamieJamesJamie)",
+    "security:openssf-scorecard",
     ":enablePreCommit"
   ],
   "addLabels": ["dependencies", "{{updateType}}", "{{manager}}"]
