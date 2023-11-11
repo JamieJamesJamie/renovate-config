@@ -5,7 +5,8 @@
     ":semanticCommits",
     ":reviewer(JamieJamesJamie)",
     "security:openssf-scorecard",
-    ":enablePreCommit"
+    ":enablePreCommit",
+    "regexManagers:githubActionsVersions"
   ],
   "addLabels": ["dependencies", "{{updateType}}", "{{manager}}"]
 }
