@@ -1,5 +1,10 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["config:recommended", ":semanticCommits", ":enablePreCommit"],
+  "extends": [
+    "config:recommended",
+    ":semanticCommits",
+    ":reviewer(JamieJamesJamie)",
+    ":enablePreCommit"
+  ],
   "addLabels": ["dependencies", "{{updateType}}", "{{manager}}"]
 }
