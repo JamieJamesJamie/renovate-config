@@ -6,7 +6,8 @@
     ":reviewer(JamieJamesJamie)",
     "security:openssf-scorecard",
     ":enablePreCommit",
-    "regexManagers:githubActionsVersions"
+    "regexManagers:githubActionsVersions",
+    "regexManagers:dockerfileVersions"
   ],
   "addLabels": ["dependencies", "{{updateType}}", "{{manager}}"],
   "git-submodules": { "enabled": true }
