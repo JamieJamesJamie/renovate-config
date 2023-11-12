@@ -8,5 +8,6 @@
     ":enablePreCommit",
     "regexManagers:githubActionsVersions"
   ],
-  "addLabels": ["dependencies", "{{updateType}}", "{{manager}}"]
+  "addLabels": ["dependencies", "{{updateType}}", "{{manager}}"],
+  "git-submodules": { "enabled": true }
 }
