@@ -11,13 +11,5 @@
   ],
   "addLabels": ["dependencies", "{{updateType}}", "{{manager}}"],
   "git-submodules": { "enabled": true },
-  "lockFileMaintenance": { "enabled": true },
-  "packageRules": [
-    {
-      "matchDatasources": ["nuget"],
-      "postUpgradeTasks": {
-        "commands": ["dotnet restore"]
-      }
-    }
-  ]
+  "lockFileMaintenance": { "enabled": true }
 }
