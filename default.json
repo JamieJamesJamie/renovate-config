@@ -3,6 +3,7 @@
   "extends": [
     "config:best-practices",
     ":pinVersions",
+    ":maintainLockFilesWeekly",
     ":semanticCommits",
     ":reviewer(JamieJamesJamie)",
     "security:openssf-scorecard",
@@ -11,6 +12,5 @@
     "regexManagers:dockerfileVersions"
   ],
   "addLabels": ["dependencies", "{{updateType}}", "{{manager}}"],
-  "git-submodules": { "enabled": true },
-  "lockFileMaintenance": { "enabled": true }
+  "git-submodules": { "enabled": true }
 }
