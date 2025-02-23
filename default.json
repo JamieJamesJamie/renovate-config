@@ -41,6 +41,20 @@
       "matchStrings": [
         "{ \"currentValue\": features.$sift(function($value, $key) {$key ~> /ghcr.io\\/devcontainers\\/features\\/node/}).*.nvmVersion }"
       ]
+    },
+    {
+      "description": "Manager for the rust devcontainer feature's rust version",
+      "fileMatch": [
+        "^.devcontainer/devcontainer.json$",
+        "^.devcontainer.json$"
+      ],
+      "fileFormat": "json",
+      "customType": "jsonata",
+      "datasourceTemplate": "github-releases",
+      "depNameTemplate": "rust-lang/rust",
+      "matchStrings": [
+        "{ \"currentValue\": features.$sift(function($value, $key) {$key ~> /ghcr.io\\/devcontainers\\/features\\/rust/}).*.version }"
+      ]
     }
   ]
 }
