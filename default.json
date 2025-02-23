@@ -15,7 +15,7 @@
   "git-submodules": { "enabled": true },
   "customManagers": [
     {
-      "description": "Manager for the node devcontainer feature",
+      "description": "Manager for the node devcontainer feature's node version",
       "fileMatch": [
         "^.devcontainer/devcontainer.json$",
         "^.devcontainer.json$"
@@ -26,6 +26,20 @@
       "depNameTemplate": "node",
       "matchStrings": [
         "{ \"currentValue\": features.$sift(function($value, $key) {$key ~> /ghcr.io\\/devcontainers\\/features\\/node/}).*.version }"
+      ]
+    },
+    {
+      "description": "Manager for the node devcontainer feature's nvm version",
+      "fileMatch": [
+        "^.devcontainer/devcontainer.json$",
+        "^.devcontainer.json$"
+      ],
+      "fileFormat": "json",
+      "customType": "jsonata",
+      "datasourceTemplate": "github-releases",
+      "depNameTemplate": "nvm-sh/nvm",
+      "matchStrings": [
+        "{ \"currentValue\": features.$sift(function($value, $key) {$key ~> /ghcr.io\\/devcontainers\\/features\\/node/}).*.nvmVersion }"
       ]
     }
   ]
