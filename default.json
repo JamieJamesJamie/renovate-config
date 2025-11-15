@@ -15,6 +15,20 @@
   "git-submodules": { "enabled": true },
   "customManagers": [
     {
+      "description": "Manager for the dotnet devcontainer feature's .NET SDK version",
+      "fileMatch": [
+        "^.devcontainer/devcontainer.json$",
+        "^.devcontainer.json$"
+      ],
+      "fileFormat": "json",
+      "customType": "jsonata",
+      "datasourceTemplate": "dotnet-version",
+      "depNameTemplate": "dotnet-sdk",
+      "matchStrings": [
+        "{ \"currentValue\": features.$sift(function($value, $key) {$key ~> /ghcr.io\\/devcontainers\\/features\\/dotnet/}).*.version }"
+      ]
+    },
+    {
       "description": "Manager for the node devcontainer feature's node version",
       "fileMatch": [
         "^.devcontainer/devcontainer.json$",
