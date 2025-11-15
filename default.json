@@ -22,7 +22,7 @@
       ],
       "datasourceTemplate": "dotnet-version",
       "depNameTemplate": "dotnet-sdk",
-      "matchStrings": ["<TargetFramework>\s*net(?<currentValue>\d+.\d+)\s*<\/TargetFramework>"]
+      "matchStrings": ["<TargetFramework>\\s*net(?<currentValue>\\d+.\\d+)\\s*<\/TargetFramework>"]
     },
     {
       "description": "Manager for the dotnet devcontainer feature's .NET SDK version",
