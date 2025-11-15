@@ -15,6 +15,16 @@
   "git-submodules": { "enabled": true },
   "customManagers": [
     {
+      "description": "Manager for the Target Framework in .NET project files",
+      "managerFilePatterns": [
+        "/\\.(?:cs|fs|vb)proj$/",
+        "/\\.(?:props|targets)$/"
+      ],
+      "datasourceTemplate": "dotnet-version",
+      "depNameTemplate": "dotnet-sdk",
+      "matchStrings": ["<TargetFramework>\s*net(?<currentValue>\d+.\d+)\s*<\/TargetFramework>"]
+    },
+    {
       "description": "Manager for the dotnet devcontainer feature's .NET SDK version",
       "fileMatch": [
         "^.devcontainer/devcontainer.json$",
