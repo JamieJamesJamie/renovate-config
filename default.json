@@ -22,6 +22,7 @@
       ],
       "datasourceTemplate": "dotnet-version",
       "depNameTemplate": "dotnet-sdk",
+      "versioning": "semver-partial",
       "matchStrings": ["<TargetFramework>\\s*net(?<currentValue>\\d+.\\d+)\\s*<\/TargetFramework>"]
     },
     {
