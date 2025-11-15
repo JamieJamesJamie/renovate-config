@@ -22,7 +22,7 @@
       ],
       "datasourceTemplate": "dotnet-version",
       "depNameTemplate": "dotnet-sdk",
-      "versioning": "semver-partial",
+      "versioning": "regex:^(?<major>\\d+)(\\.(?<minor>\\d+))?$",
       "matchStrings": ["<TargetFramework>\\s*net(?<currentValue>\\d+.\\d+)\\s*<\/TargetFramework>"]
     },
     {
