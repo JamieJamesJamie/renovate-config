@@ -87,6 +87,6 @@
       "/\\.(?:cs|fs|vb)proj$/",
       "/\\.(?:props|targets)$/"
     ],
-    "replacementVersionTemplate": "{{ major }}.{{ minor }}"
+    "versioning": "regex:/^v(?<major>\\d+)\\.(?<minor>\\d+)\\..+$/"
   }
 }
