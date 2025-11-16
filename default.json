@@ -22,7 +22,7 @@
       ],
       "datasourceTemplate": "dotnet-version",
       "depNameTemplate": "dotnet-sdk",
-      "replacementVersionTemplate": "{{ lookup (split currentValue '.') 0 }}.{{ lookup (split currentValue '.') 1 }}",
+      "replacementVersionTemplate": "{{ major }}.{{ minor }}",
       "matchStrings": ["<TargetFramework>\\s*net(?<currentValue>(?<major>\\d+)\\.(?<minor>\\d+))\\s*<\/TargetFramework>"]
     },
     {
