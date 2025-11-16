@@ -20,8 +20,9 @@
         "/\\.(?:cs|fs|vb)proj$/",
         "/\\.(?:props|targets)$/"
       ],
-      "datasourceTemplate": "dotnet-version",
+      "datasourceTemplate": "docker",
       "depNameTemplate": "dotnet-sdk",
+      "packageNameTemplate": "mcr.microsoft.com/dotnet/sdk",
       "matchStrings": ["<TargetFramework>\\s*net(?<currentValue>(?<major>\\d+)\\.(?<minor>\\d+))\\s*<\/TargetFramework>"]
     },
     {
@@ -80,13 +81,5 @@
         "{ \"currentValue\": features.$sift(function($value, $key) {$key ~> /ghcr.io\\/devcontainers\\/features\\/rust/}).*.version }"
       ]
     }
-  ],
-  "packageRules": {
-    "description": "Package rule to convert .NET SDK version to X.Y for csproj, props and targets files",
-    "matchFileNames": [
-      "/\\.(?:cs|fs|vb)proj$/",
-      "/\\.(?:props|targets)$/"
-    ],
-    "versioning": "regex:/^v(?<major>\\d+)\\.(?<minor>\\d+)\\..+$/"
-  }
+  ]
 }
