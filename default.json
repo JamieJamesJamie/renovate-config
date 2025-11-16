@@ -22,7 +22,7 @@
       ],
       "datasourceTemplate": "dotnet-version",
       "depNameTemplate": "dotnet-sdk",
-      "replacementVersionTemplate": "{{ major }}.{{ minor }}",
+      "versioning": "docker",
       "matchStrings": ["<TargetFramework>\\s*net(?<currentValue>(?<major>\\d+)\\.(?<minor>\\d+))\\s*<\/TargetFramework>"]
     },
     {
