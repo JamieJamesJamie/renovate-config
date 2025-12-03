@@ -86,7 +86,7 @@
     "matchDepNames": ["python"],
     "matchPackageNames": ["containerbase/python-prebuild"],
     "matchDataSources": ["github-releases"],
-    "extends": [":separatePatchReleases"],
+    "separateMinorPatch": true,
     "separateMultipleMinor": true
   ]
 }
