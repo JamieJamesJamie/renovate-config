@@ -81,5 +81,12 @@
         "{ \"currentValue\": features.$sift(function($value, $key) {$key ~> /ghcr.io\\/devcontainers\\/features\\/rust/}).*.version }"
       ]
     }
+  ],
+  "packageRules": [
+    "matchDepNames": ["python"],
+    "matchPackageNames": ["containerbase/python-prebuild"],
+    "matchDataSources": ["github-releases"],
+    "extends": [":separatePatchReleases"],
+    "separateMultipleMinor": true
   ]
 }
